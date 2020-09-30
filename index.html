@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desparate House Crimes</title>
+    <!--BULMA stylesheet-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+</head>
+
+<body>
+
+    <!--Navigation Bar-->
+    <nav class="navbar has-background-info-dark" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item has-text-info-light">
+                <h2>Desparate House Crimes</h2>
+            </a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+    </nav>
+
+    <div class='card'>
+        <div class='has-background-info'id='googleMap' style='width:100%'></div>
+        <!-- Search Information -->
+        
+        <div class='column is-two-fifths'>
+            <div class="card">
+                <div class="card-content">
+            <div class='field has-addons'>
+                <input class='input' type='text' placeholder='Zip Code'>
+                <a class='button has-background-info-dark has-text-info-light'>Search</a>
+            </div>
+            <!-- Side Bar Information -->
+                    <p class="title">
+                        Various Information for our project
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--google goes here-->
+
+
+    <!-- script for google api -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJAuzpRLEOho9MMVaG8eKxIO4YYXMtuFI&callback=initMap"
+        type="text/javascript"></script>
+</body>
+
+</html>
