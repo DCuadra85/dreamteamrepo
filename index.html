@@ -23,23 +23,22 @@
     <div class='card'>
         <!--google map goes here v-->
         <div id='googleMap' style='width:100%'>
-        <!-- Search Information -->
-                <iframe
-                width="100%"
-                height="1000px"
-                frameborder="0" style="border:0"
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCJAuzpRLEOho9MMVaG8eKxIO4YYXMtuFI&q=Oakland" allowfullscreen>
-                </iframe>
-            </div>
+            <!-- Search Information -->
+            <iframe width="100%" height="1000px" frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCJAuzpRLEOho9MMVaG8eKxIO4YYXMtuFI&q=Oakland"
+                allowfullscreen>
+            </iframe>
+        </div>
         <div class='column is-two-fifths is-overlay'>
             <div class="card">
                 <div class="card-content">
-            <div class='field has-addons'>
-                <input class='input' type='text' placeholder='Zip Code' id='zipCode'>
-                <a class='button has-background-info-dark has-text-info-light'>Search</a>
-            </div>
-            <!-- Side Bar Information -->
-                    <p class="title" id='housingInformation'> <!--possibly set the display = none until button is clicked-->
+                    <div class='field has-addons'>
+                        <input class='input' type='text' placeholder='Zip Code' id='zipCode'>
+                        <a class='button has-background-info-dark has-text-info-light'>Search</a>
+                    </div>
+                    <!-- Side Bar Information -->
+                    <p class="title" id='housingInformation'>
+                        <!--possibly set the display = none until button is clicked-->
                         Various Information for our project
                     </p>
                 </div>
@@ -47,14 +46,14 @@
         </div>
     </div>
 
-<!--footer-->
+    <!--footer-->
     <footer class="footer">
         <div class="content has-text-centered">
-          <p>
-            Made with ❤️ by The Dream Team
-          </p>
+            <p>
+                Made with ❤️ by The Dream Team
+            </p>
         </div>
-      </footer>
+    </footer>
 
     <!-- script for google api -->
     <script async defer
