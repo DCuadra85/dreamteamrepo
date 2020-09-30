@@ -26,18 +26,20 @@
     </nav>
 
     <div class='card'>
-        <div class='has-background-info'id='googleMap' style='width:100%'></div>
-        <!-- Search Information -->
+        <!--google map goes here v-->
+        <div id='googleMap' style='width:100%'>
         
+        </div>
+        <!-- Search Information -->
         <div class='column is-two-fifths'>
             <div class="card">
                 <div class="card-content">
             <div class='field has-addons'>
-                <input class='input' type='text' placeholder='Zip Code'>
+                <input class='input' type='text' placeholder='Zip Code' id='zipCode'>
                 <a class='button has-background-info-dark has-text-info-light'>Search</a>
             </div>
             <!-- Side Bar Information -->
-                    <p class="title">
+                    <p class="title" id='housingInformation'> <!--possibly set the display = none until button is clicked-->
                         Various Information for our project
                     </p>
                 </div>
@@ -45,8 +47,14 @@
         </div>
     </div>
 
-    <!--google goes here-->
-
+<!--footer-->
+    <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            Made with ❤️ by The Dream Team
+          </p>
+        </div>
+      </footer>
 
     <!-- script for google api -->
     <script async defer
