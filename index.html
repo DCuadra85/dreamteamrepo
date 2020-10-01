@@ -32,10 +32,22 @@
     <div class='column is-two-fifths is-overlay mt-6'>
         <div class="card">
             <div class="card-content ">
-                <input class='input' type='text' placeholder='City' id='cityName'>
+                <div class="field">
+                    <label class="label">City:</label>
+                    <div class="control">
+                        <div class="select">
+                            <select>
+                                <option id='berkeley'>Berkeley</option>
+                                <option id='oakland'>Oakland</option>
+                                <option id='sanFrancisco'>San Francisco</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <label class="label">Food Type:</label>                
                 <input class='input' type='text' placeholder='Food Category' id='foodCategory'>
                 <div class="field">
-                    <label class="label">Radius (miles)</label>
+                    <label class="label">Radius (miles):</label>
                     <div class="control">
                         <div class="select">
                             <select>
@@ -68,6 +80,8 @@
     </footer>
 
     <!-- script for google api -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="yelp.js"></script>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJAuzpRLEOho9MMVaG8eKxIO4YYXMtuFI&callback=initMap"
         type="text/javascript"></script>
