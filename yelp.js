@@ -29,24 +29,22 @@ $.ajax({
     for (let i = 0; i < businesses.length; i++){
       let bizResult = businesses[i];
       let bizName = bizResult.name;
-      // What is the Bulma class for bold or larger text?
-      let bizNameLi = $(`<p>${bizName}</p>`);
-      let bizPhone = bizResult.phone;
-      let bizPhoneLi = $(`<p>Phone: ${bizPhone}</p>`);
-      let bizPic = bizResult.image_url;
-      let bizPicLi = $(`<img src="${bizPic}" alt="${bizName} image"/>`);
-      let bizAddress = bizResult.location.address1;
-      let bizAddressLi = $(`<p>${bizAddress}</p>`);
-      let bizPrice = bizResult.price;
-      let bizPriceLi = $(`<p>${bizPrice}</p>`);
-      let bizRating = bizResult.rating;
-      let bizRatingLi = $(`<p>Rating: ${bizRating}</p>`);
-      let bizReviews = bizResult.review_count;
-      let bizReviewsLi = $(`<p>Review Count: ${bizReviews}</p>`);
       let bizUrl = bizResult.url;
-      let bizUrlLi = $(`<a href="${bizUrl}" target="_blank">Visit Site</a>`);
+      // What is the Bulma class for bold or larger text?
+      let bizUrlEl = $(`<a href="${bizUrl}" target="_blank">${bizName}</a>`);
+      let bizPhone = bizResult.display_phone;
+      let bizPhoneEl = $(`<p>Phone: ${bizPhone}</p>`);
+      let bizPic = bizResult.image_url;
+      let bizPicEl = $(`<img src="${bizPic}" alt="${bizName} Yelp image"/>`);
+      let bizAddress = bizResult.location.address1;
+      let bizAddressEl = $(`<p>${bizAddress}</p>`);
+      let bizPrice = bizResult.price;
+      let bizPriceEl = $(`<p>${bizPrice}</p>`);
+      let bizRating = bizResult.rating;
+      let bizReviews = bizResult.review_count;
+      let bizRateReview = $(`<p><span><img src="assets/regular_${bizRating}.png" alt="rating image"></span> ${bizReviews} reviews</p>`)
       let yelpUl = $("<div>");
-      yelpUl.append(bizPicLi, bizNameLi, bizPhoneLi, bizAddressLi, bizPriceLi, bizRatingLi, bizReviewsLi, bizUrlLi);
+      yelpUl.append(bizPicEl, bizRateReview, bizUrlEl, bizPhoneEl, bizAddressEl, bizPriceEl);
       console.log(yelpUl);
       $("#yelp").append(yelpUl);
     }
