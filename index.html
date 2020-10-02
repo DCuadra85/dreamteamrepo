@@ -5,23 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
 
+    <link rel='stylesheet' href='style.css'>
+</head>
+
+
   
 </head>
 <body>
+
+    <!--Navigation Bar-->
     <nav class="navbar has-background-danger-dark" role="navigation" aria-label="main navigation">
-        <div class='field has-addons'>
-        <div class="navbar-brand">
-            <a class="navbar-item">
-                <img src="knives2.png" alt='knives'>
-                <h2 class='has-text-white is-family-monospace'>Yelp For Help!</h2>
-            </a>
+        <div class="field has-addons">
+            <div class="navbar-brand column is-two-fifths">
+                <a class="navbar-item" href="homepage.html">
+                    <img src="assets/knives2.png" alt="knives">
+                    <h2 class="has-text-white is-family-monospace">Yelp For Help!</h2>
+                </a>
+            </div>
+            <div class='has-text-right column is-three-fifths'>
+                <p class="has-text-white is-family-monospace" id="crimeInfo"></p>
+                <p class="has-text-white is-family-monospace" id="totalCost"></p>
+            </div>
         </div>
-    </div>
+
     </nav>
     <figure class='has-text-centered'>
     <img class='animate__animated animate__bounceInDown' src='knives2.png'>

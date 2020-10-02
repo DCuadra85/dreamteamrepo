@@ -7,21 +7,24 @@
     <title>Yelp For Help!</title>
     <!--BULMA stylesheet-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
 <!-- 
     <!--Navigation Bar-->
     <nav class="navbar has-background-danger-dark" role="navigation" aria-label="main navigation">
-        <div class='field has-addons'>
-        <div class="navbar-brand">
-            <a class="navbar-item">
-                <img src="knives2.png" alt='knives'>
-                <h2 class='has-text-white is-family-monospace'>Yelp For Help!</h2>
-            </a>
+        <div class="field has-addons">
+            <div class="navbar-brand">
+                <a class="navbar-item">
+                    <img src="assets/knives2.png" alt="knives">
+                    <h2 class="has-text-white is-family-monospace" id="yelpCrimeButton">Yelp For Help!</h2>
+                </a>
+            </div>
         </div>
-    </div>
     </nav>
+
 
     <!--google map goes here v-->
     <div id='googleMap' style='width:100%'>
@@ -65,20 +68,13 @@
                 <a class='button has-background-danger-dark has-text-white'>Search</a>
 
                 <!-- Side Bar Information -->
-
-                <p class="title" id='housingInformation'>
-                    <!--possibly set the display = none until button is clicked-->
-                    Various details for our project
-                </p>
                 <div id="yelp"></div>
             </div>
         </div>
     </div>
     </div>
-
-    <!--footer-->
     <footer class="footer">
-        <div class="content has-text-centered">
+        <div class="content has-text-centered is-family-monospace">
             <p>
                 Made with ❤️ by The Dream Team
             </p>
@@ -93,6 +89,8 @@
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJAuzpRLEOho9MMVaG8eKxIO4YYXMtuFI&callback=initMap"
         type="text/javascript"></script>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
 
 </html>
