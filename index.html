@@ -10,7 +10,7 @@
 </head>
 
 <body>
-
+<!-- 
     <!--Navigation Bar-->
     <nav class="navbar has-background-danger-dark" role="navigation" aria-label="main navigation">
         <div class='field has-addons'>
@@ -40,9 +40,9 @@
                     <div class="control">
                         <div class="select">
                             <select>
-                                <option id='berkeley'>Berkeley</option>
-                                <option id='oakland'>Oakland</option>
-                                <option id='sanFrancisco'>San Francisco</option>
+                                <option value='berkeley' id= >Berkeley</option>
+                                <option value='oakland'>Oakland</option>
+                                <option value='sanFrancisco'>San Francisco</option>
                             </select>
                         </div>
                     </div>
@@ -53,21 +53,24 @@
                     <label class="label">Radius (miles):</label>
                     <div class="control">
                         <div class="select">
-                            <select>
-                                <option id='fiveMiles'>5 Miles</option>
-                                <option id='tenMiles'>10 Miles</option>
-                                <option id='twentyMiles'>20 Miles</option>
-                            </select>
+                <select id="myselect">
+                    <option id="oakland" value="CA0010900">Oakland</option>
+                    <option id="berkeley" value="CA0010300">Berkeley</option>
+                    <option id="sanfran" value="CA0380100">San Francisco</option>
+                </select>
                         </div>
                     </div>
+
                 </div>
                 <a class='button has-background-danger-dark has-text-white'>Search</a>
 
                 <!-- Side Bar Information -->
+
                 <p class="title" id='housingInformation'>
                     <!--possibly set the display = none until button is clicked-->
                     Various details for our project
                 </p>
+                <div id="yelp"></div>
             </div>
         </div>
     </div>
@@ -84,6 +87,8 @@
 
     <!-- script for google api -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+     <script src="script.js"></script>
     <script src="yelp.js"></script>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJAuzpRLEOho9MMVaG8eKxIO4YYXMtuFI&callback=initMap"
