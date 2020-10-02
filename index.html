@@ -4,79 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yelp For Help!</title>
-    <!--BULMA stylesheet-->
+    <title>Home</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <link rel='stylesheet' href='style.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 </head>
 
 <body>
-    <!--Navigation Bar-->
     <nav class="navbar has-background-danger-dark" role="navigation" aria-label="main navigation">
         <div class="field has-addons">
-            <div class="navbar-brand column is-two-fifths">
-                <a class="navbar-item" href="homepage.html">
+            <div class="navbar-brand">
+                <a class="navbar-item">
                     <img src="knives2.png" alt="knives">
-                    <h2 class="has-text-white is-family-monospace">Yelp For Help!</h2>
+                    <h2 class="has-text-white is-family-monospace" id="yelpCrimeButton">Yelp For Help!</h2>
                 </a>
             </div>
-            <div class='has-text-right column is-three-fifths'>
-                <p class="has-text-white is-family-monospace" id="crimeInfo"></p>
-                <p class="has-text-white is-family-monospace" id="totalCost"></p>
-            </div>
         </div>
-
     </nav>
-
-    <!--google map goes here v-->
-    <div id="googleMap" style="width:100%">
-        <iframe width="100%" height="1000px" frameborder="0" style="border:0"
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCJAuzpRLEOho9MMVaG8eKxIO4YYXMtuFI&q=Oakland"
-            allowfullscreen>
-        </iframe>
-    </div>
-
-    <!-- Search Information -->
-    <div class="column is-two-fifths is-overlay mt-6 is-family-monospace">
-        <div class="card">
-            <div class="card-content ">
-                <div class="field">
-                    <label class="label">City:</label>
-                    <div class="control">
-                        <div class="select">
-                            <select class='is-family-monospace' id="myselect">
-                                <option id="placeholder">Choose a City</option>
-                                <option id="oakland" value="CA0010900">Oakland</option>
-                                <option id="berkeley" value="CA0010300">Berkeley</option>
-                                <option id="sanfran" value="CA0380100">San Francisco</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <label class="label">Food Type:</label>
-                <input class="input" type="text" placeholder="Food Category" id="foodCategory">
-                <div class="field">
-                    <label class="label">Radius (miles):</label>
-                    <div class="control">
-                        <div class="select">
-                            <select class='is-family-monospace' id="radius">
-                                <option id='fiveMiles' value="5">5 miles</option>
-                                <option id='tenMiles' value="10"> 10 miles</option>
-                                <option id='twentyMiles' value="20">20 miles</option>
-                            </select>
-                        </div>
-                    </div>
-
-                </div>
-                <a class="button has-background-danger-dark has-text-white is-family-monospace" id="search-btn">Search</a>
-
-                <!-- Side Bar Information -->
-                <div id='yelp'></div>
-            </div>
-        </div>
-    </div>
-    </div>
-
+    <figure class="has-text-centered">
+        <a href="index.html">
+            <img class="animate__animated animate__bounceInDown mt-6" src="knives2.png">
+        </a>
+        <div class="has-text-centered has-text-danger-dark has-text-weight-bold is-family-monospace is-size-2">Yelp For
+            Help!</div>
+    </figure>
     <!--footer-->
     <footer class="footer">
         <div class="content has-text-centered is-family-monospace">
@@ -86,17 +37,8 @@
         </div>
     </footer>
 
-    <!-- script for google api -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
     <script src="script.js"></script>
-    <script src="yelp.js"></script>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJAuzpRLEOho9MMVaG8eKxIO4YYXMtuFI&callback=initMap"
-        type="text/javascript"></script>
-    <script defer
-    src="https://maps.googleapis.com/maps/api/js?libraries=geometry,places
-        &key=YOUR_API_KEY&callback=initMap"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
 
 </html>
