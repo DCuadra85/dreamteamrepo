@@ -1,5 +1,6 @@
+// Parameters for yelp AJAX call
 // Update to select id val from html
-let term = "burrito";
+let term = "tacos";
 let city ="oakland";
 let radius = 20;
 let radiusMeters = calculateMeters(radius);
@@ -15,6 +16,7 @@ function calculateMeters (radius){
 }
 let queryUrl = `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${city}&radius=${radiusMeters}`;
 
+// AJAX call to render yelp search results
 $.ajax({
     url: queryUrl,
     method: "GET",
@@ -25,7 +27,6 @@ $.ajax({
   }).then(function(response) {
     console.log(response);
     let businesses = response.businesses;
-    // Create for loop to go through the full object
     for (let i = 0; i < businesses.length; i++){
       let bizResult = businesses[i];
       let bizName = bizResult.name;
