@@ -16,7 +16,8 @@ Deployment: https://dcuadra85.github.io/dreamteamrepo/
 
 [Bulma.io](https://bulma.io/)
 [Yelp Api](https://www.yelp.com/developers/documentation/v3)
-[FOIA]
+[FOIA Api](https://www.foia.gov/developer/)
+[Google Maps](https://developers.google.com/maps/documentation)
 
 <hr>
 
