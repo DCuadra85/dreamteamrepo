@@ -13,13 +13,18 @@
     <!--Navigation Bar-->
     <nav class="navbar has-background-danger-dark" role="navigation" aria-label="main navigation">
         <div class="field has-addons">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="homepage.html">
-                <img src="knives2.png" alt="knives">
-                <h2 class="has-text-white is-family-monospace">Yelp For Help!</h2>
-            </a>
+            <div class="navbar-brand column is-two-fifths">
+                <a class="navbar-item" href="homepage.html">
+                    <img src="knives2.png" alt="knives">
+                    <h2 class="has-text-white is-family-monospace">Yelp For Help!</h2>
+                </a>
+            </div>
+            <div class='has-text-right column is-three-fifths'>
+                <p class="has-text-white is-family-monospace" id="crimeInfo"></p>
+                <p class="has-text-white is-family-monospace" id="totalCost"></p>
+            </div>
         </div>
-    </div>
+
     </nav>
 
     <!--google map goes here v-->
@@ -38,28 +43,26 @@
                     <label class="label">City:</label>
                     <div class="control">
                         <div class="select">
-                            <select>
-                                <option value="berkeley" id= >Berkeley</option>
-                                <option value="oakland">Oakland</option>
-                                <option value="sanFrancisco">San Francisco</option>
+                            <select id="myselect">
+                                <option id="placeholder">Choose a City</option>
+                                <option id="oakland" value="CA0010900">Oakland</option>
+                                <option id="berkeley" value="CA0010300">Berkeley</option>
+                                <option id="sanfran" value="CA0380100">San Francisco</option>
                             </select>
                         </div>
                     </div>
                 </div>
-                <label class="label">Food Type:</label>                
+                <label class="label">Food Type:</label>
                 <input class="input" type="text" placeholder="Food Category" id="foodCategory">
                 <div class="field">
                     <label class="label">Radius (miles):</label>
                     <div class="control">
                         <div class="select">
-                <select id="myselect">
-                    <option id="oakland" value="CA0010900">Oakland</option>
-                    <option id="berkeley" value="CA0010300">Berkeley</option>
-                    <option id="sanfran" value="CA0380100">San Francisco</option>
-                </select>
-                    <p id="theftyear">Year</p>
-                    <p id="theftcount">Theft Count</p>
-                    <p id="theftvalue">Theft Value</p>
+                            <select>
+                                <option id='fiveMiles'>5 miles</option>
+                                <option id='tenMiles'> 10 miles</option>
+                                <option id='twentyMiles'>20 miles</option>
+                            </select>
                         </div>
                     </div>
 
@@ -90,7 +93,7 @@
     <!-- script for google api -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-     <script src="script.js"></script>
+    <script src="script.js"></script>
     <script src="yelp.js"></script>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJAuzpRLEOho9MMVaG8eKxIO4YYXMtuFI&callback=initMap"

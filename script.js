@@ -45,15 +45,15 @@ $(document).ready(function () {
         const cityName = cityIndex[cityORI];
         console.log(cityORI);
         console.log(cityName, " has been clicked");
-        var queryURL = "https://api.usa.gov/crime/fbi/sapi/api/data/supplemental/motor-vehicle-theft/agency/" + cityORI + "/OFFENSE/2018/2019?API_KEY=iiHnOKfno2Mgkt5AynpvPpUQTEyxE77jo1RU8PIv";
+        var queryURL = "https://api.usa.gov/crime/fbi/sapi/api/data/supplemental/motor-vehicle-theft/agency/" + cityORI + "/OFFENSE/2019/2019?API_KEY=iiHnOKfno2Mgkt5AynpvPpUQTEyxE77jo1RU8PIv";
         $.ajax({
             url: queryURL,
             method: "GET",
         }).then(function (response) {
             console.log(response);
-            $("#theftyear").text("Year: " + response.results[0].data_year);
-            $("#theftcount").text("Theft Count: " + response.results[0].actual_count);
-            $("#theftvalue").text("$" + response.results[0].stolen_value_total)
+            // $("#crimeInfo").text("Year: " + response.results[0].data_year);
+            $("#crimeInfo").text("Year: " + response.results[0].data_year + " Theft Count: " + response.results[0].actual_count);
+            $('#totalCost').text(" Total Value $" + response.results[0].stolen_value_total);
         })
     });
 
