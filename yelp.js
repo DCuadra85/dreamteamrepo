@@ -24,5 +24,28 @@ $.ajax({
     }
   }).then(function(response) {
     console.log(response);
-    // append results as a list in an empty div
+    let businesses = response.businesses;
+    // Create for loop to go through the full object
+    for (let i = 0; i < businesses.length; i++){
+      let bizResult = businesses[i];
+      let bizName = bizResult.name;
+      let bizNameLi = $(`<li>${bizName}</li>`);
+      let bizPhone = bizResult.phone;
+      let bizPhoneLi = $(`<li>${bizPhone}</li>`);
+      let bizPic = bizResult.image_url;
+      let bizPicLi = $(`<li>${bizPic}</li>`);
+      let bizAddress = bizResult.location.address1;
+      let bizAddressLi = $(`<li>${bizAddress}</li>`);
+      let bizPrice = bizResult.price;
+      let bizPriceLi = $(`<li>${bizPrice}</li>`);
+      let bizRating = bizResult.rating;
+      let bizRatingLi = $(`<li>${bizRating}</li>`);
+      let bizReviews = bizResult.review_count;
+      let bizReviewsLi = $(`<li>${bizReviews}</li>`);
+      let bizUrl = bizResult.url;
+      let bizUrlLi = $(`<li>${bizUrl}</li>`);
+      let yelpUl = $("<ul>");
+      yelpUl.append(bizNameLi, bizPhoneLi, bizPicLi, bizAddressLi, bizPriceLi, bizRatingLi, bizReviewsLi, bizUrlLi);
+      console.log(yelpUl);
+    }
   })
