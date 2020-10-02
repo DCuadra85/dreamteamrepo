@@ -10,21 +10,20 @@
 </head>
 
 <body>
-<!-- 
     <!--Navigation Bar-->
     <nav class="navbar has-background-danger-dark" role="navigation" aria-label="main navigation">
-        <div class='field has-addons'>
+        <div class="field has-addons">
         <div class="navbar-brand">
-            <a class="navbar-item">
-                <img src="knives2.png" alt='knives'>
-                <h2 class='has-text-white is-family-monospace'>Yelp For Help!</h2>
+            <a class="navbar-item" href="homepage.html">
+                <img src="knives2.png" alt="knives">
+                <h2 class="has-text-white is-family-monospace">Yelp For Help!</h2>
             </a>
         </div>
     </div>
     </nav>
 
     <!--google map goes here v-->
-    <div id='googleMap' style='width:100%'>
+    <div id="googleMap" style="width:100%">
         <iframe width="100%" height="1000px" frameborder="0" style="border:0"
             src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCJAuzpRLEOho9MMVaG8eKxIO4YYXMtuFI&q=Oakland"
             allowfullscreen>
@@ -32,7 +31,7 @@
     </div>
 
     <!-- Search Information -->
-    <div class='column is-two-fifths is-overlay mt-6'>
+    <div class="column is-two-fifths is-overlay mt-6">
         <div class="card">
             <div class="card-content ">
                 <div class="field">
@@ -40,15 +39,15 @@
                     <div class="control">
                         <div class="select">
                             <select>
-                                <option value='berkeley' id= >Berkeley</option>
-                                <option value='oakland'>Oakland</option>
-                                <option value='sanFrancisco'>San Francisco</option>
+                                <option value="berkeley" id= >Berkeley</option>
+                                <option value="oakland">Oakland</option>
+                                <option value="sanFrancisco">San Francisco</option>
                             </select>
                         </div>
                     </div>
                 </div>
                 <label class="label">Food Type:</label>                
-                <input class='input' type='text' placeholder='Food Category' id='foodCategory'>
+                <input class="input" type="text" placeholder="Food Category" id="foodCategory">
                 <div class="field">
                     <label class="label">Radius (miles):</label>
                     <div class="control">
@@ -62,11 +61,11 @@
                     </div>
 
                 </div>
-                <a class='button has-background-danger-dark has-text-white'>Search</a>
+                <a class="button has-background-danger-dark has-text-white">Search</a>
 
                 <!-- Side Bar Information -->
 
-                <p class="title" id='housingInformation'>
+                <p class="title" id="housingInformation">
                     <!--possibly set the display = none until button is clicked-->
                     Various details for our project
                 </p>
