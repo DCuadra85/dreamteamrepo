@@ -29,23 +29,25 @@ $.ajax({
     for (let i = 0; i < businesses.length; i++){
       let bizResult = businesses[i];
       let bizName = bizResult.name;
-      let bizNameLi = $(`<li>${bizName}</li>`);
+      // What is the Bulma class for bold or larger text?
+      let bizNameLi = $(`<p>${bizName}</p>`);
       let bizPhone = bizResult.phone;
-      let bizPhoneLi = $(`<li>${bizPhone}</li>`);
+      let bizPhoneLi = $(`<p>Phone: ${bizPhone}</p>`);
       let bizPic = bizResult.image_url;
-      let bizPicLi = $(`<li>${bizPic}</li>`);
+      let bizPicLi = $(`<img src="${bizPic}" alt="${bizName} image"/>`);
       let bizAddress = bizResult.location.address1;
-      let bizAddressLi = $(`<li>${bizAddress}</li>`);
+      let bizAddressLi = $(`<p>${bizAddress}</p>`);
       let bizPrice = bizResult.price;
-      let bizPriceLi = $(`<li>${bizPrice}</li>`);
+      let bizPriceLi = $(`<p>${bizPrice}</p>`);
       let bizRating = bizResult.rating;
-      let bizRatingLi = $(`<li>${bizRating}</li>`);
+      let bizRatingLi = $(`<p>Rating: ${bizRating}</p>`);
       let bizReviews = bizResult.review_count;
-      let bizReviewsLi = $(`<li>${bizReviews}</li>`);
+      let bizReviewsLi = $(`<p>Review Count: ${bizReviews}</p>`);
       let bizUrl = bizResult.url;
-      let bizUrlLi = $(`<li>${bizUrl}</li>`);
-      let yelpUl = $("<ul>");
-      yelpUl.append(bizNameLi, bizPhoneLi, bizPicLi, bizAddressLi, bizPriceLi, bizRatingLi, bizReviewsLi, bizUrlLi);
+      let bizUrlLi = $(`<a href="${bizUrl}" target="_blank">Visit Site</a>`);
+      let yelpUl = $("<div>");
+      yelpUl.append(bizPicLi, bizNameLi, bizPhoneLi, bizAddressLi, bizPriceLi, bizRatingLi, bizReviewsLi, bizUrlLi);
       console.log(yelpUl);
+      $("#yelp").append(yelpUl);
     }
   })
