@@ -57,6 +57,10 @@ $(document).ready(function () {
   }
   $("#search-btn").on("click", function(event){
     event.preventDefault();
-    renderYelp();
+    if ($("#foodCategory").val() === "" || $("#myselect option:selected").text() === "Choose a City"){
+      return
+    } else {
+      renderYelp();
+    }
   })
 })
