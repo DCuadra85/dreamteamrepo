@@ -9,3 +9,8 @@
 // ori9 lookup - alameda sheriffs - CA0010000  
 
 // https://api.usa.gov/crime/fbi/sapi/api/summarized/agencies/CA00100/offenses/2018/2020?API_KEY=CkxBCdOiAAp2R8Xc1Sx3OhEd1ZNVMLstYdcGybR1
+
+$('#yelpCrimeButton').on('click',function{
+
+    
+})
