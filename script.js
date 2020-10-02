@@ -11,10 +11,10 @@
 // https://api.usa.gov/crime/fbi/sapi/api/summarized/agencies/CA00100/offenses/2018/2020?API_KEY=CkxBCdOiAAp2R8Xc1Sx3OhEd1ZNVMLstYdcGybR1
 
 
-$('#yelpCrimeButton').on('click',function{
+// $('#yelpCrimeButton').on('click',function{
 
     
-})
+// })
 // working - https://api.usa.gov/crime/fbi/sapi/api/agencies?api_key=iiHnOKfno2Mgkt5AynpvPpUQTEyxE77jo1RU8PIv
 // working - https://api.usa.gov/crime/fbi/sapi/api/data/arrest/states/ca/dui/monthly/2018/2019?API_KEY=iiHnOKfno2Mgkt5AynpvPpUQTEyxE77jo1RU8PIv
 // working - https://api.usa.gov/crime/fbi/sapi/api/data/supplemental/agency/CA0010000/property_type/2018/2019?API_KEY=iiHnOKfno2Mgkt5AynpvPpUQTEyxE77jo1RU8PIv
@@ -54,5 +54,8 @@ $('#yelpCrimeButton').on('click',function{
             method: "GET",
         }).then(function (response) {
             console.log(response);
+            $("#theftyear").text("Year: " + response.results[0].data_year);
+            $("#theftcount").text("Theft Count: " + response.results[0].actual_count);
+            $("#theftvalue").text("$" + response.results[0].stolen_value_total)
         })
     });
