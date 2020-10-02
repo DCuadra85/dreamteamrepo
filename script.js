@@ -5,6 +5,9 @@
 
 // https://api.usa.gov/crime/fbi/sapi/api/participation/national?api_key=
 
+
+// ori7 lookup - alameda sheriffs - CA00100
+// ori9 lookup - alameda sheriffs - CA0010000  
 // https://api.usa.gov/crime/fbi/sapi/api/summarized/agencies/CA00100/offenses/2018/2020?API_KEY=CkxBCdOiAAp2R8Xc1Sx3OhEd1ZNVMLstYdcGybR1
 
 // working - https://api.usa.gov/crime/fbi/sapi/api/agencies?api_key=iiHnOKfno2Mgkt5AynpvPpUQTEyxE77jo1RU8PIv
@@ -28,8 +31,6 @@
     // var oaklandORI = "CA0010900"
     // var berkeleyORI = "CA0010300"
     // var sanFranciscoORI = "CA0380100"
-
-    //oakland  ,  berkeley  ,   SF
     //oakland  ,  berkeley  ,   SF
 
     var cityIndex = {
@@ -50,3 +51,4 @@
             console.log(response);
         })
     });
+
