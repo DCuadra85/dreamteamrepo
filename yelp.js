@@ -37,7 +37,7 @@ $(document).ready(function () {
       let bizPhone = bizResult.display_phone;
       let bizPhoneEl = $(`<p>Phone: ${bizPhone}</p>`);
       let bizPic = bizResult.image_url;
-      let bizPicEl = $(`<img src="${bizPic}" alt="${bizName} Yelp image"/>`);
+      let bizPicEl = $(`<img src="${bizPic}" alt="${bizName} Yelp image"/>`).addClass('pic');
       let bizAddress = bizResult.location.address1;
       let bizAddressEl = $(`<p>${bizAddress}</p>`);
       let bizPrice = bizResult.price;
