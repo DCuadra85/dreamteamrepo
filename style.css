@@ -1,0 +1,13 @@
+
+#yelp{
+    height: 300px;
+    overflow-y:scroll;
+}
+.pic{
+    height:200px;
+}
+body{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+}

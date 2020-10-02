@@ -7,6 +7,7 @@
     <title>Yelp For Help!</title>
     <!--BULMA stylesheet-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel='stylesheet' href='style.css'>
 </head>
 
 <body>
@@ -36,14 +37,14 @@
     </div>
 
     <!-- Search Information -->
-    <div class="column is-two-fifths is-overlay mt-6">
+    <div class="column is-two-fifths is-overlay mt-6 is-family-monospace">
         <div class="card">
             <div class="card-content ">
                 <div class="field">
                     <label class="label">City:</label>
                     <div class="control">
                         <div class="select">
-                            <select id="myselect">
+                            <select class='is-family-monospace' id="myselect">
                                 <option id="placeholder">Choose a City</option>
                                 <option id="oakland" value="CA0010900">Oakland</option>
                                 <option id="berkeley" value="CA0010300">Berkeley</option>
@@ -58,7 +59,7 @@
                     <label class="label">Radius (miles):</label>
                     <div class="control">
                         <div class="select">
-                            <select>
+                            <select class='is-family-monospace'>
                                 <option id='fiveMiles'>5 miles</option>
                                 <option id='tenMiles'> 10 miles</option>
                                 <option id='twentyMiles'>20 miles</option>
@@ -67,15 +68,10 @@
                     </div>
 
                 </div>
-                <a class="button has-background-danger-dark has-text-white">Search</a>
+                <a class="button has-background-danger-dark has-text-white is-family-monospace">Search</a>
 
                 <!-- Side Bar Information -->
-
-                <p class="title" id="housingInformation">
-                    <!--possibly set the display = none until button is clicked-->
-                    Various details for our project
-                </p>
-                <div id="yelp"></div>
+                <div id='yelp'></div>
             </div>
         </div>
     </div>
@@ -83,7 +79,7 @@
 
     <!--footer-->
     <footer class="footer">
-        <div class="content has-text-centered">
+        <div class="content has-text-centered is-family-monospace">
             <p>
                 Made with ❤️ by The Dream Team
             </p>
@@ -98,6 +94,9 @@
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJAuzpRLEOho9MMVaG8eKxIO4YYXMtuFI&callback=initMap"
         type="text/javascript"></script>
+    <script defer
+    src="https://maps.googleapis.com/maps/api/js?libraries=geometry,places
+        &key=YOUR_API_KEY&callback=initMap"></script>
 </body>
 
 </html>
