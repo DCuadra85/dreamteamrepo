@@ -7,7 +7,7 @@
     <title>Yelp For Help!</title>
     <!--BULMA stylesheet-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <link rel='stylesheet' href='style.css'>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -15,13 +15,13 @@
     <nav class="navbar has-background-danger-dark" role="navigation" aria-label="main navigation">
         <div class="field has-addons">
             <div class="navbar-brand column is-two-fifths">
-                <a class="navbar-item" href="homepage.html">
-                    <img src="knives2.png" alt="knives">
+                <a class="navbar-item" href="index.html">
+                    <img src="assets/knives2.png" alt="knives">
                     <h2 class="has-text-white is-family-monospace">Yelp For Help!</h2>
 
                 </a>
             </div>
-            <div class='has-text-right column is-three-fifths'>
+            <div class="has-text-right column is-three-fifths">
                 <p class="has-text-white is-family-monospace" id="crimeInfo"></p>
                 <p class="has-text-white is-family-monospace" id="totalCost"></p>
             </div>
@@ -38,7 +38,6 @@
     </div>
 
     <!-- Search Information -->
-
     <div class="column is-two-fifths is-overlay mt-6 is-family-monospace">
         <div class="card">
             <div class="card-content ">
@@ -46,7 +45,7 @@
                     <label class="label">City:</label>
                     <div class="control">
                         <div class="select">
-                            <select class='is-family-monospace' id="myselect">
+                            <select class="is-family-monospace" id="myselect">
                                 <option id="placeholder">Choose a City</option>
                                 <option id="oakland" value="CA0010900">Oakland</option>
                                 <option id="berkeley" value="CA0010300">Berkeley</option>
@@ -56,15 +55,15 @@
                     </div>
                 </div>
                 <label class="label">Food Type:</label>
-                <input class="input" type="text" placeholder="Food Category" id="foodCategory">
+                <input class="input" type="text" placeholder="Food Category" id="foodCategory" required>
                 <div class="field">
                     <label class="label">Radius (miles):</label>
                     <div class="control">
                         <div class="select">
-                            <select class='is-family-monospace' id="radius">
-                                <option id='fiveMiles' value="5">5 miles</option>
-                                <option id='tenMiles' value="10"> 10 miles</option>
-                                <option id='twentyMiles' value="20">20 miles</option>
+                            <select class="is-family-monospace" id="radius">
+                                <option id="fiveMiles" value="5">5 miles</option>
+                                <option id="tenMiles" value="10"> 10 miles</option>
+                                <option id="twentyMiles" value="20">20 miles</option>
                             </select>
                         </div>
                     </div>
@@ -73,10 +72,11 @@
                 <a class="button has-background-danger-dark has-text-white is-family-monospace" id="search-btn">Search</a>
 
                 <!-- Side Bar Information -->
-                <div id='yelp'></div>
+                <div id="yelp"></div>
             </div>
         </div>
     </div>
+
     </div>
     <!--footer-->
     <footer class="footer">
