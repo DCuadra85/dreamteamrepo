@@ -42,7 +42,8 @@ $.ajax({
       let bizPriceEl = $(`<p>${bizPrice}</p>`);
       let bizRating = bizResult.rating;
       let bizReviews = bizResult.review_count;
-      let bizRateReview = $(`<p><span><img src="assets/regular_${bizRating}.png" alt="rating image"></span> ${bizReviews} reviews</p>`)
+      let bizRateReview = $(`<p><span><img src="assets/regular_${bizRating}.png" alt="rating image"></span> ${bizReviews} reviews <span><img src="assets/burst_icon.png" alt="Yelp logo"></span></p>`)
+      // let yelpIcon = $(`<img src="assets/burst_icon.png" alt="Yelp logo">`)
       let yelpUl = $("<div>");
       yelpUl.append(bizPicEl, bizRateReview, bizUrlEl, bizPhoneEl, bizAddressEl, bizPriceEl);
       console.log(yelpUl);
