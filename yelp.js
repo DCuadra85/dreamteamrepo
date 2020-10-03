@@ -1,6 +1,5 @@
 $(document).ready(function () {
   // Parameters for yelp AJAX call
-  // Update to select id val from html
   function renderYelp(){
     $("#yelp").empty();
     let term = $("#foodCategory").val();
@@ -28,13 +27,11 @@ $(document).ready(function () {
         Authorization: "Bearer sSXTcvOqTr7PrnuDes2jfZuJfEVAFUmgxUEkl_nGtXmHpuspCLaFSmhYXlZ13UkbTxc-WgsPM0ZrZPIP9NV0bVsC4V7Ws0j3unKYYryXOiUwhDMZ7NNEZmjJkhx1X3Yx"
       }
     }).then(function (response) {
-      console.log(response);
       let businesses = response.businesses;
       for (let i = 0; i < businesses.length; i++) {
         let bizResult = businesses[i];
         let bizName = bizResult.name;
         let bizUrl = bizResult.url;
-        // What is the Bulma class for bold or larger text?
         let bizUrlEl = $(`<a href="${bizUrl}" target="_blank">${bizName}</a>`);
         let bizPhone = bizResult.display_phone;
         let bizPhoneEl = $(`<p>Phone: ${bizPhone}</p>`);
@@ -47,10 +44,8 @@ $(document).ready(function () {
         let bizRating = bizResult.rating;
         let bizReviews = bizResult.review_count;
         let bizRateReview = $(`<p><span><img src="assets/regular_${bizRating}.png" alt="rating image"></span> ${bizReviews} reviews <span><img src="assets/burst_icon.png" alt="Yelp logo"></span></p>`)
-        // let yelpIcon = $(`<img src="assets/burst_icon.png" alt="Yelp logo">`)
         let yelpUl = $("<div>");
         yelpUl.append(bizPicEl, bizRateReview, bizUrlEl, bizPhoneEl, bizAddressEl, bizPriceEl);
-        console.log(yelpUl);
         $("#yelp").append(yelpUl);
       }
     })
