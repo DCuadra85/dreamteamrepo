@@ -50,6 +50,13 @@ var cityIndex = {
 
 The Yelp API pulls information about each restaraunt: sample image, star rating, number of reviews, name, phone number, and address of the restaraunt. When clicked, each restaraunt will take the user to the yelp page for more information.
 
+[Animate CSS](https://animate.style/) was used to allow the logo image to drop in on the home page of the site. all we had to do was add 'animate_animated animate_bounceInDown' to the class of the image.
+
+```
+<img class="animate__animated animate__bounceInDown mt-6" src="assets/knives2.png">
+
+```
+
 
 <hr>
 
@@ -65,6 +72,7 @@ In future developments of this webpage, the map will pin locations of crimes and
 * [Yelp Api](https://www.yelp.com/developers/documentation/v3)
 * [FOIA Api](https://www.foia.gov/developer/)
 * [Google Maps](https://developers.google.com/maps/documentation)
+* [Animate CSS](https://animate.style/)
 
 <hr>
 
